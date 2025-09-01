@@ -10,6 +10,6 @@ This is a GitHub repository of all my completed projects, which mainly lie in th
 - Data Automation/Analysis
 - Full-stack website
 - Embedded Systems
-- Graphic User Interface development
+- Graphical User Interface development
   
 A code database of all my projects
