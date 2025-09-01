@@ -1,0 +1,11 @@
+/* Hovering effects */
+.arrow:hover {
+    background-color: #90ee90; /* Change background to a bright cyan */
+    color: #000; /* Change text color to black */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+}
+.action-item:hover{
+    background-color: #90ee90; /* Change background to a bright cyan */
+    color: #000; /* Change text color to black */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+}

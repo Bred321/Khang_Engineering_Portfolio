@@ -1,0 +1,225 @@
+/* Body style */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1a1d21;
+    color: #cfe8e0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.control-panel {
+    display: flex;
+    flex-grow: 1;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.metric {
+    background: #3b3e42;
+    padding: 150px;
+    width: 500px;  /* Fixed width */
+    height: 50px; /* Fixed height */
+    text-align: center;
+    border-radius: 10px;
+    position: relative; /* Enable absolute positioning for children */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-metric {
+    background: #3b3e42;
+    padding: 90px;
+    width: 500px;  /* Fixed width */
+    height: 20px; /* Fixed height */
+    text-align: center;
+    border-radius: 10px;
+    position: relative; /* Enable absolute positioning for children */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.metric .label {
+    position: absolute;
+    font-size: 50px;
+    top: 5px;
+    left: 10px;
+}
+.right-metric .label {
+    position: absolute;
+    font-size: 50px;
+    top: 5px;
+    left: 10px;
+}
+.metric .value {
+    font-size: 200px;
+    color: #90ee90;
+}
+.right-metric .value {
+    font-size: 100px;
+    color: #90ee90;
+}
+.left-controls {
+    display: flex;
+    flex-direction: column; /* Ensures up/down buttons are stacked vertically */
+}
+
+.vertical-buttons {
+    display: flex;
+    flex-direction: column; /* Stack up/down buttons */
+    gap: 15px; /* Add space between buttons */
+}
+.right-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.horizontal-buttons {
+    display: flex;
+    flex-direction: row; /* Keep left/right buttons horizontal */
+    gap: 10px;
+}
+.arrow {
+    background: #3b3e42;
+    color: #90ee90;
+    border: 2px solid #90ee90;
+    padding: 30px;
+    font-size: 270px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* Responsive adjustments for 24-inch 1080p screens and below */
+@media (max-width: 1920px) {
+    .metrics {
+        grid-template-columns: 1fr 1fr;
+        gap: 1vw;
+    }
+    .metric, .right-metric {
+        width: 25vw;
+        min-width: 180px;
+        max-width: 700px;
+        padding: 3vw 0;
+        height: auto;
+    }
+    .metric .label, .right-metric .label {
+        font-size: 1.5vw;
+        top: 0.5vw;
+        left: 0.5vw;
+    }
+    .metric .value {
+        font-size: 5vw;
+    }
+    .right-metric .value {
+        font-size: 2.5vw;
+    }
+    .arrow {
+        padding: 2vw;
+        font-size: 6vw;
+    }
+}
+
+/* Further scale down for smaller screens */
+@media (max-width: 1200px) {
+    .metrics {
+        grid-template-columns: 1fr;
+    }
+    .metric, .right-metric {
+        width: 60vw;
+        padding: 5vw 0;
+    }
+    .arrow {
+        font-size: 8vw;
+    }
+}
+
+/* Responsive adjustments for 6.1-inch smartphone screens (e.g., iPhone 13/14/15) */
+@media (max-width: 844px), (max-height: 390px) {
+    html, body {
+        width: 100vw;
+        height: 100vh;
+        overflow-x: auto;
+        overflow-y: auto;
+        font-size: 10px;
+    }
+    body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .label {
+        font-size: 5px;
+        margin: 0;
+    }
+    .control-panel {
+        flex-direction: column;
+        padding: 1vw 0.5vw;
+        gap: 1vw;
+        width: 100vw;
+        box-sizing: border-box;
+        align-items: stretch;
+    }
+    .metrics {
+        display: block;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+    .metrics {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        gap: 2vw;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+    .metric, .right-metric {
+        display: block;
+        width: 35vw;
+        min-width: 0;
+        max-width: 95vw;
+        padding: 2vw 0;
+        border-radius: 4px;
+        height: auto;
+        box-sizing: border-box;
+        margin: 2vw 0;
+    }
+    .metric .label, .right-metric .label {
+        font-size: 1.5vw;
+        top: 1vw;
+        left: 2vw;
+    }
+    .metric .value {
+        font-size: 4vw;
+    }
+    .right-metric .value {
+        font-size: 2.5vw;
+    }
+    .arrow {
+        padding: 1vw;
+        font-size: 4vw;
+        min-width: 0;
+        min-height: 0;
+    }
+    .left-controls, .right-controls {
+        flex-direction: row;
+        gap: 1vw;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        box-sizing: border-box;
+    }
+    .vertical-buttons, .horizontal-buttons {
+        flex-direction: row;
+        gap: 1vw;
+    }
+    
+}

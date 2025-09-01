@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>ESP32-CAM Robot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>ESP32-CAM Robot</h1>
+    <img src="" id="streaming" />
+    <table>
+      <tr>
+        <td colspan="3" align="center">
+          <button class="button" id="forward">Forward</button>
+        </td>
+      </tr>
+      <tr>
+        <td align="center">
+          <button class="button" id="left">Left</button>
+        </td>
+        <td align="center">
+          <button class="button" id="stop">Stop</button>
+        </td>
+        <td align="center">
+          <button class="button" id="right">Right</button>
+        </td>
+        <td align="Center" class="mode-switch">
+          <button id="modeSwitch" class="switch-button">Manual Mode</button>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" align="center">
+          <button class="button" id="backward">Backward</button>
+        </td>
+      </tr>
+    </table>
+    <script src="index.js"></script>
+  </body>
+</html>

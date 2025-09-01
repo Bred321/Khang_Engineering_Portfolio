@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AGV Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Roboto, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    header {
+      height: 50px;
+      background: #4a7c59;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    main {
+      flex: 1;
+      position: relative;
+      background: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #main-view {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #center-panel {
+      flex: 1;
+      background: #dcdcdc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    #camera-feed {
+      background: #cfcfcf;
+      border-bottom: 2px solid #aaa;
+    }
+
+    #digital-twin {
+      background: #dcdcdc;
+    }
+
+    #controlCluster {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 1rem;
+      background: #4a7c59;
+      border-radius: 14px;
+      padding: 0.5rem 1rem;
+    }
+
+    #auxSidebar {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      background: #6ba97c;
+      padding: 0.6rem;
+      border-radius: 10px;
+    }
+
+    .controlBtn, .auxBtn {
+      background: #ffffff22;
+      border: none;
+      color: #fff;
+      font-size: 1.3rem;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s;
+      border: 1px solid #ffffff55;
+    }
+
+    .controlBtn:hover, .auxBtn:hover {
+      background: #ffffff44;
+    }
+
+    #statusWidget {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #4a7c59;
+      border-radius: 10px;
+      padding: 0.6rem 1rem;
+      font-size: 0.95rem;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .indicator {
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .normal { background: green; }
+    .warning { background: orange; }
+    .critical { background: red; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>🚜 AGV Dashboard</div>
+    <nav style="display: flex; gap: 1rem; justify-content: center; flex: 1;">
+      <a href="home3.html" style="color: white; text-decoration: none; font-weight: bold;">Home Control</a>
+      <a href="camera3.html" style="color: white; text-decoration: none; font-weight: bold;">Camera</a>
+    </nav>
+    <div>Battery: 🔋 85%</div>
+  </header>
+
+  <main>
+    <div id="center-panel">📷 Camera Feed</div>
+
+    <div id="auxSidebar">
+      <button id="setManualBtn">🖐️ Manual</button>
+      <button id="setAutoBtn">🤖 Auto</button>
+      <button id="setUVOnBtn">💡 UV On</button>
+      <button id="setUVOffBtn">🚫 UV Off</button>
+    </div>
+
+    <div id="statusWidget">
+      <div>🚀 Speed: 0.0 m/s</div>
+      <div>🧭 Heading: 0°</div>
+      <div>📍 GPS: 0.000, 0.000</div>
+      <div>⚠️ Obstacle: <span class="indicator normal">None</span></div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const setManualBtn = document.getElementById("setManualBtn");
+      const setAutoBtn = document.getElementById("setAutoBtn");
+      const setUVOnBtn = document.getElementById("setUVOnBtn");
+      const setUVOffBtn = document.getElementById("setUVOffBtn");
+      const stopBtn = document.getElementById("stopBtn");
+
+      setManualBtn.onclick = () => alert("Set mode: Manual");
+      setAutoBtn.onclick = () => alert("Set mode: Auto");
+
+      setUVOnBtn.onclick = () => alert("UV Light turned ON");
+      setUVOffBtn.onclick = () => alert("UV Light turned OFF");
+      stopBtn.onclick = () => alert("Command: Stop");
+
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  margin: 0px auto;
+  padding-top: 30px;
+}
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+td {
+  padding: 8 px;
+}
+.button {
+  background-color: #2f4468;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 6px 3px;
+  cursor: pointer;
+  touch-action:  manipulation;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.button.active,
+.button:active {
+  background-color: #1c2b4a;
+}
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+.mode-switch {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.switch-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #2196F3; /* Blue for Manual Mode */
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.switch-button.automated {
+  background-color: #4CAF50; /* Green for Automated Mode */
+}
+
+.switch-button:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+}

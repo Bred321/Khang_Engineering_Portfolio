@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AGV Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Roboto, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    header {
+      height: 50px;
+      background: #4a7c59;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex: 1;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      position: relative;
+      background: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #center-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    #camera-feed,
+    #digital-twin {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    #camera-feed {
+      background: #cfcfcf;
+      border-bottom: 2px solid #aaa;
+    }
+
+    #digital-twin {
+      background: #dcdcdc;
+    }
+
+    #camera-feed img,
+    #digital-twin img {
+      width: 2000px;
+      height: 420px;
+      object-fit: fill;
+    }
+
+    #controlCluster {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 1rem;
+      background: #4a7c59;
+      border-radius: 14px;
+      padding: 0.5rem 1rem;
+      box-shadow: 0 6px 16px #00000022;
+    }
+
+    #auxSidebar {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      background: #6ba97c;
+      padding: 0.6rem;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px #00000022;
+    }
+
+    .controlBtn,
+    .auxBtn {
+      background: #ffffff22;
+      border: none;
+      color: #fff;
+      font-size: 1.3rem;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.05s;
+      border: 1px solid #ffffff55;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .controlBtn:hover,
+    .auxBtn:hover {
+      background: #ffffff44;
+    }
+
+    .controlBtn.active {
+      background: #ffffff66;
+      transform: translateY(1px);
+    }
+
+    #statusWidget {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #4a7c59;
+      border-radius: 10px;
+      padding: 0.6rem 1rem;
+      font-size: 0.95rem;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      box-shadow: 0 6px 16px #00000022;
+    }
+
+    .indicator {
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .normal { background: green; }
+    .warning { background: orange; }
+    .critical { background: red; }
+
+    #connStatus {
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>🚜 AGV Dashboard</div>
+    <div>Battery: 🔋 85%</div>
+  </header>
+
+  <main>
+    <div id="center-panel">
+      <div id="camera-feed">
+        <img src="agv_view_in_farm.png" alt="Camera Feed">
+      </div>
+      <div id="digital-twin">
+        <img src="agv_digital_twin.png" alt="Digital Twin">
+      </div>
+    </div>
+
+    <div id="controlCluster" aria-label="Drive controls">
+      <button class="controlBtn" id="btn-up"    data-action="forward"  aria-label="Forward">⬆️</button>
+      <button class="controlBtn" id="btn-left"  data-action="left"     aria-label="Left">⬅️</button>
+      <button class="controlBtn" id="stopBtn"   data-action="stop"     aria-label="Stop">⏹</button>
+      <button class="controlBtn" id="btn-right" data-action="right"    aria-label="Right">➡️</button>
+      <button class="controlBtn" id="btn-down"  data-action="backward" aria-label="Backward">⬇️</button>
+    </div>
+
+    <div id="auxSidebar" aria-label="Auxiliary controls">
+      <button class="auxBtn" id="setManualBtn" aria-label="Manual mode">🖐️</button>
+      <button class="auxBtn" id="setAutoBtn"   aria-label="Auto mode">🤖</button>
+      <button class="auxBtn" id="setUVOnBtn"   aria-label="UV On">💡</button>
+      <button class="auxBtn" id="setUVOffBtn"  aria-label="UV Off">🚫</button>
+    </div>
+
+    <div id="statusWidget">
+      <div>🚀 Speed: <span id="spd">0.0</span> m/s</div>
+      <div>🧭 Heading: <span id="hdg">0</span>°</div>
+      <div>📍 GPS: <span id="gpsLat">0.000</span>, <span id="gpsLon">0.000</span></div>
+      <div>⚠️ Obstacle: <span id="obs" class="indicator normal">None</span></div>
+    </div>
+  </main>
+</body>
+</html>

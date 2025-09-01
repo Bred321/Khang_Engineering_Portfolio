@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AGV Home Control</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f4f4f4;
+      color: #222;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header, footer {
+      background: #4a7c59;
+      color: white;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+    }
+
+    #left-controls, #right-controls {
+      width: 20%;
+      background: #e2e2e2;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    #center-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: #dcdcdc;
+      overflow: hidden;
+    }
+
+  #camera-feed, #digital-twin {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  #camera-feed img,
+  #digital-twin img {
+    width: 2000px;
+    height: 411px;
+    object-fit: cover;
+    display: block;
+  }
+
+    #camera-feed {
+      background: #cfcfcf;
+      border-bottom: 2px solid #aaa;
+    }
+
+    #digital-twin {
+      background: #dcdcdc;
+    }
+
+
+    button {
+      background: #4a7c59;
+      color: white;
+      border: none;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #3e6b4d;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-around;
+      font-size: 0.9rem;
+    }
+
+    .indicator {
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .normal { background: green; color: white; }
+    .warning { background: orange; color: white; }
+    .critical { background: red; color: white; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>🚜 AGV Dashboard</div>
+  </header>
+
+  <main>
+    <div id="left-controls">
+      <button>⬆️ Forward</button>
+      <button>⬅️ Left</button>
+      <button>⏹ Stop</button>
+      <button>➡️ Right</button>
+      <button>⬇️ Backward</button>
+    </div>
+
+    <div id="center-panel">
+      <div id="camera-feed">
+        <img src="agv_view_in_farm.png" alt="AGV Camera Feed">
+      </div>
+      <div id="digital-twin">
+        <img src="agv_digital_twin.png" alt="AGV Digital Twin">
+      </div>
+    </div>
+
+    <div id="right-controls">
+      <button>🖐️ Manual</button>
+      <button>🤖 Auto</button>
+      <button>💡 UV On</button>
+      <button>🚫 UV Off</button>
+    </div>
+  </main>
+
+  <footer>
+    <div>🚀 Speed: <span>0.0 m/s</span></div>
+    <div>🧭 Heading: <span>0°</span></div>
+    <div>📍 GPS: <span>0.000, 0.000</span></div>
+    <div>⚠️ Obstacle: <span class="indicator normal">None</span></div>
+    <div>Battery: 🔋 85%</div>
+  </footer>
+</body>
+</html>

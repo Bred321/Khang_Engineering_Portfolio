@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AGV Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    header {
+      height: 60px;
+      background: #4a7c59;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+      font-size: 1.1rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    header button {
+      background: #6ba97c;
+      border: none;
+      color: #fff;
+      padding: 0.4rem 0.8rem;
+      margin-left: 0.3rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-size: 0.95rem;
+    }
+
+    header button:hover {
+      background: #589b6d;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      position: relative;
+    }
+
+    #center-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: #dcdcdc;
+      overflow: hidden;
+    }
+
+    #camera-feed, #digital-twin {
+      flex: 1 1 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    #camera-feed {
+      background: #cfcfcf;
+      border-bottom: 2px solid #aaa;
+    }
+
+    #digital-twin {
+      background: #dcdcdc;
+    }
+
+    #camera-feed img,
+    #digital-twin img {
+      width: 2000px;
+      height: 411px;
+      object-fit: cover;
+      display: block;
+    }
+
+    #sidebar {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .fab {
+      background: #6ba97c;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      border: 2px solid #4a7c59;
+      color: white;
+    }
+
+    .fab:hover {
+      background: #589b6d;
+    }
+
+    #statusOverlay {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: #4a7c59;
+      color: #fff;
+      border-radius: 12px;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .indicator {
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .normal { background: green; }
+    .warning { background: orange; }
+    .critical { background: red; }
+
+    footer {
+      height: 40px;
+      background: #4a7c59;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>🚜 AGV Dashboard</div>
+    <div>
+      <button id="setManualBtn">🖐️ Manual</button>
+      <button id="setAutoBtn">🤖 Auto</button>
+      <button id="setUVOnBtn">💡 UV On</button>
+      <button id="setUVOffBtn">🚫 UV Off</button>
+    </div>
+    <div>Battery: 🔋 85%</div>
+  </header>
+
+  <main>
+    <div id="center-panel">
+      <div id="camera-feed">
+        <img src="agv_view_in_farm.png" alt="Camera Feed">
+      </div>
+      <div id="digital-twin">
+        <img src="agv_digital_twin.png" alt="Digital Twin">
+      </div>
+    </div>
+
+    <div id="sidebar">
+      <div class="fab">⬆️</div>
+      <div class="fab">⬅️</div>
+      <div class="fab" id="stopBtn">⏹</div>
+      <div class="fab">➡️</div>
+      <div class="fab">⬇️</div>
+    </div>
+
+    <div id="statusOverlay">
+      <div>🚀 Speed: 0.0 m/s</div>
+      <div>🧭 Heading: 0°</div>
+      <div>📍 GPS: 0.000, 0.000</div>
+      <div>⚠️ Obstacle: <span class="indicator normal">None</span></div>
+    </div>
+  </main>
+
+  <footer>
+    <div>AGV Control Dashboard</div>
+    <div style="margin-left:auto; display:flex; gap:1rem;">
+      <a href="home2.html">Home Control</a>
+      <a href="camera2.html">Camera</a>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("setManualBtn").onclick = () => alert("Set mode: Manual");
+      document.getElementById("setAutoBtn").onclick = () => alert("Set mode: Auto");
+      document.getElementById("setUVOnBtn").onclick = () => alert("UV Light turned ON");
+      document.getElementById("setUVOffBtn").onclick = () => alert("UV Light turned OFF");
+      document.getElementById("stopBtn").onclick = () => alert("Command: Stop");
+    });
+  </script>
+</body>
+</html>

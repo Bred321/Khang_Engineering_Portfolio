@@ -1,0 +1,214 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    margin: 20px 0;
+    font-size: 2rem;
+}
+
+/* Camera Stream */
+.stream-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#streaming {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #000;
+}
+
+/* Control Buttons */
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button {
+    width: 100px;
+    height: 50px;
+    font-size: 1.2rem;
+    border: none;
+    background: #2f4468;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    user-select: none;
+}
+
+.button:hover {
+    background: #1c2b4a;
+}
+
+.button:active {
+    transform: scale(0.9);
+}
+
+/* Mode Switch */
+.mode-switch {
+    margin-top: 15px;
+}
+
+.switch-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background: #2196F3; /* Blue for Manual Mode */
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.switch-button.automated {
+    background: #4CAF50; /* Green for Automated Mode */
+}
+
+.switch-button:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .button {
+        width: 80px;
+        height: 45px;
+        font-size: 1rem;
+    }
+
+    .switch-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    html, body {
+      touch-action: none;
+  }
+}
+/* Prevent text selection */
+* {
+  user-select: none; 
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Prevent zooming when clicking buttons on mobile */
+html, body {
+  touch-action: manipulation;
+}
+
+/* Button Fix for Touch Devices */
+.button, .switch-button {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Prevent accidental text selection */
+h1, p, button {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* Bed layout */
+.beds-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.bed {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Plant buttons */
+.plant-btn {
+  width: 80px;
+  padding: 10px;
+  border: 2px solid green;
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.plant-btn.inactive {
+  background-color: red;
+  border-color: darkred;
+}
+.reset-btn {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 16px;
+  margin-top: 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+
