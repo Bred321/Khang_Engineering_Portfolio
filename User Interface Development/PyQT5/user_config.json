@@ -1,0 +1,17 @@
+{
+    "FACR_WEB_LINK_ATE_PPV": "https://qscmyfacr.intel.com/AtePpv",
+    "ACT_RESULT_PATH": "\\\\172.19.249.123\\LabData\\FACR\\VIRAL Result",
+    "ATE_RESULT_PATH":
+    {
+        "RPL": "\\\\ger.corp.intel.com\\ec\\proj\\mdl\\ha\\intel\\hdmxprogs\\rpl",
+        "ADP": "\\\\amr.corp.intel.com\\ec\\proj\\mdl\\fm\\intel\\cmtprogs\\adp",
+        "ADL": "\\\\ger.corp.intel.com\\ec\\proj\\mdl\\ha\\intel\\hdmxprogs\\adl",
+        "ADN": "\\\\gar.corp.intel.com\\ec\\proj\\mdl\\pg\\intel\\hdmxprogs\\adn",
+        "ICL": "\\\\ger.corp.intel.com\\ec\\proj\\mdl\\ha\\intel\\hdmxprogs\\icl",
+        "RKL": "\\\\ger.corp.intel.com\\ec\\proj\\mdl\\ha\\intel\\hdmxprogs\\rkl",
+        "EHL": "\\\\gar.corp.intel.com\\ec\\proj\\mdl\\pg\\intel\\hdmxprogs\\ehl",
+        "CML": "\\\\gar.corp.intel.com\\ec\\proj\\mdl\\pg\\intel\\hdmxprogs\\cml",
+        "TGL": "\\\\gar.corp.intel.com\\ec\\proj\\mdl\\pg\\intel\\hdmxprogs\\tgl"
+    },
+    "PPV_RESULT_PATH": "file:\\\\172.19.249.123\\LabData\\FACR\\FACR%20ATE-PPV"
+}

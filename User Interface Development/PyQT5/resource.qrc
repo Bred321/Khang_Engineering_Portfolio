@@ -1,0 +1,25 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>icons/Network-Domain-icon.png</file>
+    <file>icons/pencil.jpg</file>
+    <file>icons/curve.png</file>
+    <file>icons/coding.png</file>
+    <file>icons/pin_name.png</file>
+    <file>icons/browsing_file.png</file>
+    <file>icons/case.png</file>
+    <file>icons/cpu.png</file>
+    <file>icons/failure.jpg</file>
+    <file>icons/year.png</file>
+    <file>icons/3834450.png</file>
+    <file>icons/OIP.jpg</file>
+    <file>icons/running.png</file>
+    <file>icons/trash_bin.jpg</file>
+    <file>icons/files.png</file>
+    <file>icons/intel.png</file>
+    <file>icons/automatic.jpg</file>
+    <file>icons/battery.jpg</file>
+    <file>icons/computer-icons-product-manuals-owner-s-manual-icon-design-symbol-png-favpng-1qGtx1MGghGVNaqNYTM4BWAhD.jpg</file>
+    <file>icons/exit.jpg</file>
+    <file>icons/home.jpg</file>
+  </qresource>
+</RCC>
