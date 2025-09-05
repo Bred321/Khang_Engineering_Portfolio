@@ -30,3 +30,8 @@ This repository showcases my academic and internship projects in **data automati
 
 - [LinkedIn](https://www.linkedin.com/in/khang-duong-6684a7223)
 - 📧 khang.2003c@gmail.com
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).  
+You are free to use, modify, and distribute this code for personal or commercial purposes with proper attribution.
