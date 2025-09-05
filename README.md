@@ -2,7 +2,7 @@
 
 This repository showcases my academic and internship projects in **data automation**, **machine learning**, **embedded systems**, **mecahnical designs**, and **PLC/SCADA programming**.
 
-> 📍 RMIT Vietnam | ⚙️ Mechanical + Software Engineering | 🎓 GPA: 3.9 / 4.0
+> 📍 RMIT Vietnam | ⚙️ Mechanical + Electrical + Software (Mechatronics) Engineering | 🎓 GPA: 3.9 / 4.0
 
 ---
 
