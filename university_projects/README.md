@@ -15,7 +15,8 @@ Welcome to the **University Projects** section of my engineering portfolio — a
 | [Wind Turbine Mechanical Design](./wind_turbine_mechanical_design/)| Designed and calculated key turbine components with stress analysis. | SOLIDWORKS, FBD, CAD modeling |
 | [3D‑Printed Electric Vehicle](./3d_printed_electric_vehicle/) | Designed a compact battery-powered vehicle under 3D printing constraints. | SOLIDWORKS, BOM, transmission analysis |
 | [Bridge Design & Fabrication*](./bridge_design_and_fabrication/)| Performed stress analysis, fabricated using laser-cut parts, and tested load behavior. | SOLIDWORKS, simulation, DFM |
-
+| [PCB Design*](./pcb_design/)| Design a voltage regulator PCB. | Multisim, Cadence |
+D
 ---
 
 ## 🧠 Technical Highlights
