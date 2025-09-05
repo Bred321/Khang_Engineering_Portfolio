@@ -9,12 +9,12 @@ Welcome to the **University Projects** section of my engineering portfolio — a
 | 📂 Project Name | 📝 Summary | 🛠️ Tools / Technologies |
 |----------------|------------|--------------------------|
 | [Predictive Maintenance (Robotic Arm Failure Detection](./predictive_maintenance/) | Developed a supervised ML pipeline to predict equipment failures with high accuracy. | Python, Pandas, Scikit-learn, Jupyter |
-| [IoT Real-Time Control Web App](./iot_real_time_control_web_app/)  | Created a full-stack web interface to control embedded systems in real-time. | FastAPI, WebSockets, HTML/CSS/JS |
-| **Siemens SCADA Simulation** | Built a SCADA system with PLC and HMI for conveyor belt automation. | TIA Portal, WinCC, S7-1200 PLC |
-| **Embedded Drivers on NUC140** | Programmed peripheral-level drivers using direct register access. | C/C++, Keil uVision, NUC140 |
-| **Wind Turbine Mechanical Design** | Designed and calculated key turbine components with stress analysis. | SOLIDWORKS, FBD, CAD modeling |
-| **3D‑Printed Electric Vehicle** | Designed a compact battery-powered vehicle under 3D printing constraints. | SOLIDWORKS, BOM, transmission analysis |
-| **Bridge Design & Fabrication** | Performed stress analysis, fabricated using laser-cut parts, and tested load behavior. | SOLIDWORKS, simulation, DFM |
+| [IoT Real-Time Control Web App](./iot_real_time_control_web_app/) | Created a full-stack web interface to control embedded systems in real-time. | FastAPI, WebSockets, HTML/CSS/JS |
+| [Siemens SCADA Simulation](./siemen_scada_simulation/)| Built a SCADA system with PLC and HMI for conveyor belt automation. | TIA Portal, WinCC, S7-1200 PLC |
+| [Embedded Drivers on NUC140](./embedded_drivers_on_nuc140/)| Programmed peripheral-level drivers using direct register access. | C/C++, Keil uVision, NUC140 |
+| [Wind Turbine Mechanical Design](./wind_turbine_mechanical_design/)| Designed and calculated key turbine components with stress analysis. | SOLIDWORKS, FBD, CAD modeling |
+| [3D‑Printed Electric Vehicle](./3d_printed_electric_vehicle/) | Designed a compact battery-powered vehicle under 3D printing constraints. | SOLIDWORKS, BOM, transmission analysis |
+| [Bridge Design & Fabrication*](./bridge_design_and_fabrication/)| Performed stress analysis, fabricated using laser-cut parts, and tested load behavior. | SOLIDWORKS, simulation, DFM |
 
 ---
 
