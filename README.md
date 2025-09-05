@@ -1,15 +1,32 @@
-# Khang_Engineering_Portfolio
-Hi, welcome to my website
+# 🧠 Duong Bao Khang – Engineering Portfolio
 
-If you would like to view my CV and detailed engineering portfolio, please access the link: 
+This repository showcases my academic and internship projects in **data automation**, **machine learning**, **embedded systems**, **mecahnical designs**, and **PLC/SCADA programming**.
 
-Check out my [portfolio website](https://drive.google.com/drive/folders/1xkIda6oK2CUDwqOvFPqWilP2ogljThd5?usp=drive_link)!
+> 📍 RMIT Vietnam | ⚙️ Mechanical + Electrical + Software (Mechatronics) Engineering | 🎓 GPA: 3.9 / 4.0
 
-This is a GitHub repository of all my completed projects, which mainly lie in the following categories:
-- AI/Machine Learning
-- Data Automation/Analysis
-- Full-stack website
-- Embedded Systems
-- Graphical User Interface development
-  
-A code database of all my projects
+---
+
+## 📌 Highlights
+
+- 🧾 **Python Automation at Baker Hughes**: Streamlined Excel workflows (80K+ rows), anomaly detection, logging automation.
+- 🧠 **ML-based Failure Prediction**: 90% accuracy with Random Forest classifier on robotics arm data.
+- 🌐 **Full-Stack IoT Web Control**: Built a real-time control system for embedded boards using FastAPI and WebSockets.
+- ⚡ **SCADA & PLC Simulation**: Designed fault-tolerant Siemens-based HMI + Ladder Logic system.
+- 🌪 **Wind Turbine CAD Design**: Mechanically engineered shaft, gearbox, and bearings with stress and FBD analysis.
+
+---
+
+## 🔍 Repository Structure
+
+| Folder | Description |
+|--------|-------------|
+| `/internship_projects/` | Real-world projects from Baker Hughes and Intel |
+| `/university_projects/` | Capstone and coursework-based technical projects |
+| `/certificates_and_recognition/` | Awards, courses, and extracurricular contributions |
+
+---
+
+## 📫 Contact
+
+- [LinkedIn](https://www.linkedin.com/in/khang-duong-6684a7223)
+- 📧 khang.2003c@gmail.com
