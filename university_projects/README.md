@@ -9,7 +9,7 @@ Welcome to the **University Projects** section of my engineering portfolio — a
 | 📂 Project Name | 📝 Summary | 🛠️ Tools / Technologies |
 |----------------|------------|--------------------------|
 | [Predictive Maintenance (Robotic Arm Failure Detection](./predictive_maintenance/) | Developed a supervised ML pipeline to predict equipment failures with high accuracy. | Python, Pandas, Scikit-learn, Jupyter |
-| **IoT Real-Time Control Web App** | Created a full-stack web interface to control embedded systems in real-time. | FastAPI, WebSockets, HTML/CSS/JS |
+| (IoT Real-Time Control Web App](./iot_real_time_control_web_app/)  | Created a full-stack web interface to control embedded systems in real-time. | FastAPI, WebSockets, HTML/CSS/JS |
 | **Siemens SCADA Simulation** | Built a SCADA system with PLC and HMI for conveyor belt automation. | TIA Portal, WinCC, S7-1200 PLC |
 | **Embedded Drivers on NUC140** | Programmed peripheral-level drivers using direct register access. | C/C++, Keil uVision, NUC140 |
 | **Wind Turbine Mechanical Design** | Designed and calculated key turbine components with stress analysis. | SOLIDWORKS, FBD, CAD modeling |
